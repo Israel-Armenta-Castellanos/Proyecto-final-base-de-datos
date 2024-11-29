@@ -1,55 +1,57 @@
 package fca.suayed.dto;
 
 import org.jdbi.v3.core.mapper.reflect.ColumnName;
+import java.sql.Timestamp;
 
-public class ClientesDto {
-    private Long id;
-    private String nombre;
-    private String apellidoPaterno;
-    private String apellidoMaterno;
-    private String rfc;
+public class OrdenesDto {
+    private long id;
+    private int cliente_id;
+    private int producto_id;
+    private int cantidad;
+    private Timestamp fecha;
 
-    public Long getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(long id) {
         this.id = id;
     }
 
-    @ColumnName("nombre")
-    public String getNombre() {
-        return nombre;
+    @ColumnName("cliente_id")
+    public int getCliente_id() {
+        return cliente_id;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setCliente_id(int cliente_id) {
+        this.cliente_id = cliente_id;
     }
 
-    @ColumnName("apellido_paterno")
-    public String getApellidoPaterno() {
-        return apellidoPaterno;
+    @ColumnName("producto_id")
+    public int getProducto_id() {
+        return producto_id;
     }
 
-    public void setApellidoPaterno(String apellidoPaterno) {
-        this.apellidoPaterno = apellidoPaterno;
+    public void setProducto_id(int producto_id) {
+        this.producto_id = producto_id;
     }
 
-    @ColumnName("apellido_materno")
-    public String getApellidoMaterno() {
-        return apellidoMaterno;
+    @ColumnName("cantidad")
+    public int getCantidad() {
+        return cantidad;
     }
 
-    public void setApellidoMaterno(String apellidoMaterno) {
-        this.apellidoMaterno = apellidoMaterno;
+    public void setCantidad(int cantidad) {
+        this.cantidad = cantidad;
     }
 
-    @ColumnName("rfc")
-    public String getRfc() {
-        return rfc;
+    @ColumnName("fecha")
+    public Timestamp getFecha() {
+        return fecha;
     }
 
-    public void setRfc(String rfc) {
-        this.rfc = rfc;
+    public void setFecha(Timestamp fecha) {
+        this.fecha = fecha;
     }
 }
+
