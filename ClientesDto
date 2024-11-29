@@ -17,6 +17,7 @@ public class ClientesDto {
         this.id = id;
     }
 
+    @ColumnName("nombre")
     public String getNombre() {
         return nombre;
     }
@@ -25,6 +26,7 @@ public class ClientesDto {
         this.nombre = nombre;
     }
 
+    @ColumnName("apellido_paterno")
     public String getApellidoPaterno() {
         return apellidoPaterno;
     }
@@ -33,6 +35,7 @@ public class ClientesDto {
         this.apellidoPaterno = apellidoPaterno;
     }
 
+    @ColumnName("apellido_materno")
     public String getApellidoMaterno() {
         return apellidoMaterno;
     }
@@ -41,6 +44,7 @@ public class ClientesDto {
         this.apellidoMaterno = apellidoMaterno;
     }
 
+    @ColumnName("rfc")
     public String getRfc() {
         return rfc;
     }
